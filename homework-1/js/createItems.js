@@ -39,8 +39,9 @@ const createItemCard = ({name, price, description}) => {
 }
 
 const createItems = () => {
-    /* TODO: After completing Part 4, remove the following print statement */
-    console.log(createItemCard(items[0]).outerHTML);
+    /* TODO: After completing Part 4, remove the following two lines of code */
+    const testCard = createItemCard(items[0]);
+    if (testCard) console.log(testCard.outerHTML);
     /* TODO: See Part 5 of README.md */
 }
 
