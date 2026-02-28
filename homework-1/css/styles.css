@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    max-inline-size: 1200px;
+    margin-inline: auto;
+}
+
+/* Login Page */
+
+.login-wrapper {
+    max-inline-size: 600px;
+    margin-inline: auto;
+}
+
+.form-error {
+    color: #6b1d1d;
+    background-color: #ef9595;
+    border: 1px solid #6b1d1d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-error p {
+    margin: 0;
+}
+
+.form-element {
+    margin-block: 20px;
+}
+
+.form-text {
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid #849ab7;
+    font-size: 1.3rem;
+    color: #60799c;
+}
+
+.form-label {
+    font-size: 1.4rem;
+    display: block;
+    margin-block-end: 6px;
+    color: #93acce;
+}
+
+.login-button {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #b5d1f9;
+    color: #60799c;
+}
+
+.login-button:hover {
+    background-color: #7593bc;
+    color: #b5d1f9;
+}
+
+/* Header */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 2;
+}
+
+.justify-content-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Form */
+
+select {
+    inline-size: 100%;
+    max-inline-size: 300px;
+    
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #849ab7;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Item Container and Items */
+
+.item-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    gap: 3rem;
+    
+    overflow-x: scroll;
+
+    padding-block: 20px;
+
+    @media (width < 690px) {
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+}
+
+.item {
+    text-align: center;
+    padding: 20px;
+    background-color: #b5d1f9;
+    border: 5px solid #849ab7;
+    border-radius: 10%;
+
+    display: grid;
+    grid-template-rows: 0.75fr 1fr;
+}
+
+.item .item-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.item button {
+    inline-size: 100%;
+    padding: 1em;
+    background-color: #b5d1f9;
+    border: 2px solid white;
+    border-radius: 10%;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.item button:hover,
+.item button:focus-visible {
+    background-color: #849ab7;
+    color: white;
+    border-color: black;
+}
+
+/* TODO: See Part 0 of README.md */
