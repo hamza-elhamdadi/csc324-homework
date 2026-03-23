@@ -1,6 +1,6 @@
 # Web Programming HW3: Object-Oriented JavaScript and Asynchronous Programming
 
-## Part 0 - Creating a Login App (1 point)
+## Part 0 - Creating a Login App (2 points)
 
 First, open the [data/credentials.json](./data/credentials.json) file, and take a look at the data provided. This file contains an Object with the correct username and password for a user to login.
 
@@ -37,7 +37,7 @@ This asynchronous method should:
 
 <br>
 
-## Part 1 - Creating an Item class (1 point)
+## Part 1 - Creating an Item class (2 points)
 
 First, open the [browse.html](./browse.html) file, and take a look at the ``<script>`` tag in the ``<head>`` of the document. Already defined is an exampleItemData object with four properties ``name``, ``price``, ``description``, ``category``.
 
@@ -86,7 +86,7 @@ In the head of [browse.html](./browse.html), test your ``Item`` class by creatin
 
 <br>
 
-## Part 2 - Creating an App to manage the Items on the "Browse Items" page (2 points)
+## Part 2 - Creating an App to manage the Items on the "Browse Items" page (3 points)
 
 First, open the [data/items.json](./data/items.json) file, and take a look at the data provided. This file contains an Array of ``itemData`` objects like the example provided in Part 1.
 
@@ -141,7 +141,7 @@ In [browse.html](./browse.html), remove the ``Item`` testing code. Then, import 
 
 <br>
 
-## Part 3 - Add Filtering Functionality to your "Browse Items" App class (2 points)
+## Part 3 - Add Filtering Functionality to your "Browse Items" App class (4 points)
 
 First, open the "Browse Items" page and take a look at "Filter" ``<fieldset>``. It contains two checkboxes that correspond to the two item categories in the ``items.json`` dataset. 
 
