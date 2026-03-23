@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browse</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Browse Items Page for CSC324 Homework 1" />
+
+        <link rel="stylesheet" href="./css/styles.css" />
+
+        <script type="module">
+            import Item from './js/items.js';
+
+            const exampleItemData = {
+                name: "Example Item",
+                price: 2500,
+                description: "A really cool item that we're using as an example.",
+                category: "example"
+            };
+
+            /* TODO: See "Testing your Item class" in Part 1 of README.md */
+
+            /* TODO: See "Testing your App class" in Part 2 of README.md */
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <main>
+                <h1>Browse Items</h1>
+                <section>
+                    <form class="item-options">
+                        <fieldset id="filter" class="hidden">
+                            <legend>Filter</legend>
+
+                            <div class="form-option">
+                                <input id="smartphone" name="itemFilter" type="checkbox" value="smartphone" checked/>
+                                <label for="smartphone">Smartphones</label>
+                            </div>
+                            
+                            <div class="form-option">
+                                <input id="laptop" name="itemFilter" type="checkbox" value="laptop" checked/>
+                                <label for="laptop">Laptops</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="sort" class="hidden">
+                            <legend>Sort</legend>
+
+                            <div class="form-option">
+                                <input id="ascending" name="itemSort" type="radio" value="ascending" checked/>
+                                <label for="ascending">Price: Low to High</label>
+                            </div>
+                            
+                            <div class="form-option">
+                                <input id="descending" name="itemSort" type="radio" value="descending" />
+                                <label for="descending">Price: High to Low</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="items" class="item-container"></section>
+            </main>
+        </div>
+    </body>
+</html>

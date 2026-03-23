@@ -1,0 +1,62 @@
+[
+    {
+        "name": "iPhone 17 Pro",
+        "price": 109900,
+        "description": "The all-new iPhone 17 Pro. Any more pro and it would need an agent.",
+        "category": "smartphone"
+    },
+    {
+        "name": "Samsung Galaxy S25 Ultra",
+        "price": 129999,
+        "description": "The all-new Samsung Galaxy S25 Ultra. Next-level power, next-level play.",
+        "category": "smartphone"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold7",
+        "price": 199999,
+        "description": "Experience the all-new Fold. The thinnest, lightest Galaxy Z Fold yet.",
+        "category": "smartphone"
+    },
+    {
+        "name": "Google Pixel 10 Pro",
+        "price": 99900,
+        "description": "Meet the new Pixel 10 Pro. Next-level everything.",
+        "category": "smartphone"
+    },
+    {
+        "name": "Google Pixel 10 Pro Fold",
+        "price": 179900,
+        "description": "Meet the new Pixel 10 Pro Fold. Unfold Extraordinary.",
+        "category": "smartphone"
+    },
+    {
+        "name": "M5 MacBook Pro 14in",
+        "price": 169900,
+        "description": "Fast runs in the family.",
+        "category": "laptop"
+    },
+    {
+        "name": "M5 Pro MacBook Pro 16in",
+        "price": 269900,
+        "description": "One big, powerful family.",
+        "category": "laptop"
+    },
+    {
+        "name": "Dell XPS 14",
+        "price": 134900,
+        "description": "Ultra-thin, all-day performance",
+        "category": "laptop"
+    },
+    {
+        "name": "Dell XPS 16",
+        "price": 174900,
+        "description": "Big screen, ultra-thin performance.",
+        "category": "laptop"
+    },
+    {
+        "name": "Asus ROG Zephyrus G16",
+        "price": 214999,
+        "description": "Performance meets precision.",
+        "category": "laptop"
+    }
+]

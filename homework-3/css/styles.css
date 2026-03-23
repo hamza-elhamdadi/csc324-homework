@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    max-inline-size: 1200px;
+    margin-inline: auto;
+}
+
+/* Login Page */
+
+.login-wrapper {
+    max-inline-size: 600px;
+    margin-inline: auto;
+}
+
+.form-error {
+    color: #6b1d1d;
+    background-color: #ef9595;
+    border: 1px solid #6b1d1d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-error p {
+    margin: 0;
+}
+
+.form-element {
+    margin-block: 20px;
+}
+
+.form-text {
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid #849ab7;
+    font-size: 1.3rem;
+    color: #60799c;
+}
+
+.form-label {
+    font-size: 1.4rem;
+    display: block;
+    margin-block-end: 6px;
+    color: #93acce;
+}
+
+.login-button {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #b5d1f9;
+    color: #60799c;
+}
+
+.login-button:hover {
+    background-color: #7593bc;
+    color: #b5d1f9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 2;
+}
+
+.justify-content-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Form */
+
+select {
+    inline-size: 100%;
+    max-inline-size: 300px;
+    
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #849ab7;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Item Container and Items */
+
+.item-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    gap: 3rem;
+    
+    overflow-x: scroll;
+
+    padding-block: 20px;
+
+    @media (width < 690px) {
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+}
+
+.item {
+    text-align: center;
+    padding: 20px;
+    background-color: #b5d1f9;
+    border: 5px solid #849ab7;
+    border-radius: 10%;
+
+    display: grid;
+    grid-template-rows: 0.75fr 1fr;
+
+    block-size: 325px;
+}
+
+.item .item-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.item button {
+    inline-size: 100%;
+    padding: 1em;
+    background-color: #b5d1f9;
+    border: 2px solid white;
+    border-radius: 10%;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.item button:hover,
+.item button:focus-visible {
+    background-color: #849ab7;
+    color: white;
+    border-color: black;
+}
+
+/* Filter Section */
+
+.item-options {
+    display: flex;
+    gap: 2rem;
+}
+
+legend {
+    background-color: #849ab7;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+fieldset {
+    border-radius: 10px;
+    margin-block: 10px;
+}
+
+.form-option {
+    margin: 10px;
+}
+
+.form-option input {
+    display: none;                  /* turn off the default form-option input styling, we'll create our own below */
+}
+
+.form-option label {
+    position: relative;             /* the label is positioned relative to its natural flow in the document (this allows the "position: absolute" below to work as expected) */
+    padding-inline-start: 30px;     /* add 30 pixels of padding to the left of the label so we can put a checkbox there */
+}
+
+/* 
+    ::before is a pseudo-element
+    pseudo-elements can be used to style a part of the html element
+    
+    label::before refers to the space just before the text content inside of the label
+    we'll use this pseudo-element to create a new version of the checkbox/radio
+*/
+.form-option label::before {
+    content: "";                    /* sets the content of the ::before pseudo-element to empty */
+    inline-size: 18px;              /* width is 18px */
+    block-size: 18px;               /* height is 18px */
+    position: absolute;             /* the label::before element will be positioned relative to its closest ancestor (the label element) */
+    inset-inline-start: 0;             /* this sets the left edge of the ::before pseudo-element to be exactly at the left edge of label (needs to be accompanied by position: absolute) */
+    inset-block-start: 0;              /* this sets the top edge of the ::before pseudo-element to be exactly at the top edge of the label (needs to be accompanied by position: absolute) */
+    border: 2px solid #849ab7;
+    background-color: white;
+}
+
+/* 
+    the :checked pseudo-class refers to all elements that are currently checked 
+    input:checked selects only the elements that have been checked
+
+    the + combinator selects the next sibling that matches the selector
+        "input:checked + label::before" selects the pseudo-element ::before of a label directly after a checked input
+
+*/
+.form-option input:checked + label::before { 
+    content: "✓"; /* sets the content of the ::before pseudo-element to a checkmark  */
+    color: #849ab7;
+    background-color: #d6e6fc;
+    text-align: center;
+}
+
+/* 
+    the [] selector selects elements that have a matching attribute-value pair
+    [type="checkbox"] selects all of the elements in the HTML that have type="checkbox"
+*/
+.form-option [type="checkbox"] + label::before {
+    border-radius: 2px;
+}
+
+.form-option [type="radio"] + label::before {
+    border-radius: 100px;
+}
